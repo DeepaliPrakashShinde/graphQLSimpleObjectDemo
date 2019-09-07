@@ -14,11 +14,4 @@
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
   </ItemGroup>
 
-
-  <ItemGroup>
-    <Folder Include="GraphQL\Schemas\" />
-    <Folder Include="GraphQL\Types\" />
-    <Folder Include="GraphQL\Queries\" />
-  </ItemGroup>
-
 </Project>
