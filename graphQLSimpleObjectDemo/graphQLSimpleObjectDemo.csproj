@@ -19,8 +19,6 @@
     <Folder Include="GraphQL\Schemas\" />
     <Folder Include="GraphQL\Types\" />
     <Folder Include="GraphQL\Queries\" />
-    <Folder Include="Interface\" />
-    <Folder Include="Models\" />
   </ItemGroup>
 
 </Project>
