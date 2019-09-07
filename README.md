@@ -3,7 +3,8 @@ This will give the knowledge about how to fetch the data from simple json array.
 
 Example:
 
-``` "employees": [
+
+"employees": [
       {
         "id": 1,
         "name": "John",
@@ -34,22 +35,19 @@ Example:
       }
     ]
 
-
-    In the above simple json example if you want to get the specific data like name,age for all the employee you need to use following graphQL query.```
-	```
+    In the above simple json example if you want to get the specific data like name,age for all the employee you need to use following graphQL query.
 	Input:
-    {
+    	{
   		employees
   		{
     		name
     		age
 		}
 	}
-	```
-
 	
-	```
+
 	Output:
+	
 	{
 	  "data": {
 	    "employees": [
@@ -72,4 +70,4 @@ Example:
 	    ]
 	  }
 	}
-	```
+
