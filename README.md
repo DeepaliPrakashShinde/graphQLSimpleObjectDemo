@@ -32,7 +32,7 @@ Example:
         "gender": "Male",
         "email": "benjamin@emp.com"
       }
-    ] ```
+    ]
 
 
     In the above simple json example if you want to get the specific data like name,age for all the employee you need to use following graphQL query.```
