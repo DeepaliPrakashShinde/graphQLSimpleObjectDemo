@@ -1,6 +1,12 @@
+using GraphQL;
 using GraphQL.Server;
 using GraphQL.Server.Ui.Playground;
 using GraphQL.Types;
+using graphQLSimpleObjectDemo.GraphQL.Queries;
+using graphQLSimpleObjectDemo.GraphQL.Schemas;
+using graphQLSimpleObjectDemo.GraphQL.Types;
+using graphQLSimpleObjectDemo.Interface;
+using graphQLSimpleObjectDemo.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -31,6 +37,14 @@ namespace graphQLSimpleObjectDemo
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            services.AddSingleton<IDependencyResolver>(s => new FuncDependencyResolver(s.GetRequiredService));
+            services.AddTransient<IEmployeeRepo, EmployeeRepo>();
+
+            services.AddSingleton<ISchema, EmployeeSchema>();
+            services.AddSingleton<EmployeeQuery>();
+            services.AddSingleton<EmployeeType>();
+
+            services.AddGraphQL();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
