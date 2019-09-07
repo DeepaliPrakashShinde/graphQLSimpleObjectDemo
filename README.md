@@ -34,9 +34,10 @@ Example:
       }
     ] ```
 
-```
+
     In the above simple json example if you want to get the specific data like name,age for all the employee you need to use following graphQL query.```
 	```
+	Input:
     {
   		employees
   		{
@@ -46,8 +47,9 @@ Example:
 	}
 	```
 
-	Output:
+	
 	```
+	Output:
 	{
 	  "data": {
 	    "employees": [
