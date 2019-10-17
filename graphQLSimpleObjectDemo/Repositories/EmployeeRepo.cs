@@ -1,9 +1,11 @@
 ﻿using graphQLSimpleObjectDemo.Interface;
 using graphQLSimpleObjectDemo.Models;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 
 namespace graphQLSimpleObjectDemo.Repositories
 {
+    [ExcludeFromCodeCoverage]
     public class EmployeeRepo : IEmployeeRepo
     {
         private static readonly List<Employee> _employees = new List<Employee>()
